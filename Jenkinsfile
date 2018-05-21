@@ -10,8 +10,9 @@ node {
     }
 
     stage('Node info') {
-      echo scmInfo
+      echo "${scmInfo}"
       sh 'node --version'
+      sh 'node -'
     }
 
   }

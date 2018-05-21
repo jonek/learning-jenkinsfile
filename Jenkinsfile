@@ -9,10 +9,16 @@ node {
       scmInfo = checkout scm
     }
 
-    stage('Node info') {
+    stage('SCM info') {
       echo "${scmInfo}"
+    }
+
+    stage('Node version') {
       sh 'node --version'
-      sh 'node -'
+    }
+
+    stage('Node execution') {
+      sh 'node src/main/js/hello.js'
     }
 
   }

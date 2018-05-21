@@ -13,7 +13,8 @@ node {
       echo "${scmInfo}"
     }
 
-    stage('Node version') {
+    stage('Build Environment') {
+      sh 'npm -v'
       sh 'node --version'
     }
 
